@@ -29,7 +29,7 @@ const ViewNews = () => {
   <div class="card-body">
     <h5 class="card-title">{value.title}</h5>
     <p class="card-text">{value.description}</p>
-    <a href="#" class="btn btn-primary">Read ...</a>
+    <a href={value.url} target="_blank" class=" btn btn-primary">Read ...</a>
   </div>
 </div>
                         </div>)
