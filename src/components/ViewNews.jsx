@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import NewsNavabr from './NewsNavabr'
 
 const ViewNews = () => {
     const[newsData,changeNews]=useState(
@@ -16,6 +17,7 @@ const ViewNews = () => {
   return (
     <div>
         <div className="container">
+            <NewsNavabr/>
             <div className="row">
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <div className="row g-3">
@@ -23,7 +25,7 @@ const ViewNews = () => {
                             (value,index)=>{
                                 return(<div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                             <div class="card">
-  <img src={value.image} class="card-img-top" alt="..."/>
+  <img src={value.urlToImage} class="card-img-top" />
   <div class="card-body">
     <h5 class="card-title">{value.title}</h5>
     <p class="card-text">{value.description}</p>
